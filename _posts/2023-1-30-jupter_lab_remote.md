@@ -21,10 +21,10 @@ tags: [jupyter notebook]
 
     文件一般保存在 ~/.jupyter/jupyter_notebook_config.py
 
-    > c.NotebookApp.notebook_dir = '/home/digisky/notebooks' \
-    > c.NotebookApp.ip='*' # 允许所有ip访问 \
-    > c.NotebookApp.open_browser = False # 不打开浏览器 \
-    > c.NotebookApp.port =8872 #指定端口，不要用默认8888端口！公网上不用默认端口是好文明 \
+    > c.NotebookApp.notebook_dir = '/home/digisky/notebooks' 
+    > c.NotebookApp.ip='*' # 允许所有ip访问 
+    > c.NotebookApp.open_browser = False # 不打开浏览器 
+    > c.NotebookApp.port =8872 #指定端口，不要用默认8888端口！公网上不用默认端口是好文明 
     > c.NotebookApp.allow_remote_access = True #允许远程机器访问
 
 ## 3. 加入想要使用的conda环境
@@ -38,3 +38,12 @@ tags: [jupyter notebook]
 
 # 启动
     > jupyter lab -p 8872
+
+# 新增 debug 功能
++ 依赖
+    > sudo apt install nodejs 
+    > sudo apt install npm
++ 前端 
+    > jupyter labextension install @jupyterlab/debugger 
++ 后端 
+    > conda install xeus-python -c conda-forge
